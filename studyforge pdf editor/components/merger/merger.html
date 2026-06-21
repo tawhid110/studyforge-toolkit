@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="components/merger/merger.css">
+
+<div class="module-container">
+    <h2>PDF Merger</h2>
+    <p>Drag and drop multiple PDFs below, for example, "Assignment1.pdf" and "Assignment2.pdf".</p>
+    
+    <div id="drop-zone" class="drop-zone">
+        <p>Drag & Drop PDFs here or click to select files</p>
+        <input type="file" id="file-input" multiple accept="application/pdf" hidden>
+    </div>
+    
+    <ul id="file-list"></ul>
+    
+    <button id="merge-btn" class="primary-btn">Merge PDFs</button>
+    <p id="status-message"></p>
+</div>
+
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+<script src="components/merger/merger.js"></script>

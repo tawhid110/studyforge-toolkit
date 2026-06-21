@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="components/ocr-scanner/ocr-scanner.css">
+
+<div class="module-container">
+    <h2>OCR Scanner</h2>
+    <p>Upload an image of text (like a photo of your <i>Biology</i> textbook or a screenshot of <i>Calculus</i> homework) to extract it.</p>
+    
+    <div class="upload-section">
+        <input type="file" id="image-input" accept="image/*">
+        <button id="scan-btn" class="primary-btn">Scan Image</button>
+    </div>
+    
+    <div class="preview-container">
+        <img id="image-preview" class="hidden" alt="Uploaded Image Preview">
+    </div>
+    
+    <p id="status-message"></p>
+    
+    <div id="progress-bar-container" class="hidden">
+        <div id="progress-bar"></div>
+    </div>
+    
+    <textarea id="result-text" class="hidden" placeholder="Extracted text will appear here..."></textarea>
+</div>
+
+<script src="components/ocr-scanner/ocr-scanner.js"></script>
