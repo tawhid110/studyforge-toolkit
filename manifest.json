@@ -2,7 +2,7 @@
   "name": "StudyForge",
   "short_name": "StudyForge",
   "description": "A local, limits-free study toolkit.",
-  "start_url": "/index.html",
+ "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#38bdf8",
