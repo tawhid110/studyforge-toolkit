@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyForge</title>
+    <link rel="stylesheet" href="main.css">
+    
+    <script src="https://unpkg.com/tesseract.js@v4.1.1/dist/tesseract.min.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#38bdf8">
+</head>
+<body>
+    <nav class="sidebar">
+        <h2>StudyForge</h2>
+        <ul>
+            <li><button onclick="loadComponent('merger')">PDF Merger</button></li>
+            <li><button onclick="loadComponent('speech-reader')">Speech Reader</button></li>
+            <li><button onclick="loadComponent('citation-builder')">Citation Builder</button></li>
+            <li><button onclick="loadComponent('flashcard-maker')">Flashcard Maker</button></li>
+            <li><button onclick="loadComponent('ocr-scanner')">OCR Scanner</button></li>
+            <li><button onclick="loadComponent('pdf-extractor')">PDF Extractor</button></li>
+            <li><button onclick="loadComponent('text-analyzer')">Text Analyzer</button></li>
+        </ul>
+        
+        <div style="margin-top: 40px; border-top: 1px solid #334155; padding-top: 10px;">
+            <button id="theme-btn" onclick="toggleTheme()" style="color: #cbd5e1;">☀️ Light Mode</button>
+        </div>
+    </nav>
+    
+    <main id="app-content">
+        <h1>Welcome to StudyForge</h1>
+        <p>Select a tool from the sidebar to begin.</p>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        // Register the Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('ServiceWorker registered'))
+                    .catch(err => console.log('ServiceWorker failed: ', err));
+            });
+        }
+    </script>
+</body>
+</html>
