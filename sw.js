@@ -1,14 +1,17 @@
-const CACHE_NAME = 'studyforge-v1';
+// Changed to v2 to force the browser to update!
+const CACHE_NAME = 'studyforge-v2'; 
+
+// Added dots to all the paths
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/main.css',
-  '/app.js',
-  '/manifest.json',
-  '/components/merger/merger.html',
-  '/components/merger/merger.css',
-  '/components/merger/merger.js'
-  // Add the paths for all your other module files here!
+  './',
+  './index.html',
+  './main.css',
+  './app.js',
+  './manifest.json',
+  './components/merger/merger.html',
+  './components/merger/merger.css',
+  './components/merger/merger.js'
+  // (Make sure any other paths you added here also start with ./)
 ];
 
 // Install the Service Worker and cache the files
